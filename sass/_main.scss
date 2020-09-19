@@ -1,0 +1,176 @@
+.container{
+    font-size: 15px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    &__header{
+        grid-column: 1/4;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        background-color:$bg-color;
+        border-bottom: 3px solid $text_1;
+        &--logo{
+            padding: 32px 80px 32px 100px;
+            // grid-column: 1/2;
+            & h2{
+                font-size: 30px;
+                // font-size:2vw;
+                color: $text_1;
+                & span{
+                    color: $text_2;
+                }
+            }
+        }
+        &--menu{
+            justify-self: flex-end;
+            align-self: center;
+            padding: 35px 100px;
+            & ul li{
+                display: inline;
+                padding-right: 20px;
+                & .current{
+                    color:$text_1;
+                    font-weight: bold;
+                }
+                & a{
+                    font-size: 16px;
+                    color: $text_2;
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    line-height: 24px;
+                    &:hover{
+                        color: #CCCCCC;
+                        font-weight: bold;
+                    }
+                }  
+            }
+        }
+    }
+    &__main{
+        grid-column: 1/4;
+        height: 60vh;
+        background-image: url("../img/showcase.jpg");
+        background-repeat: no-repeat;
+        // min-height: 400px;
+        background-size: 160%;
+        text-align: center;
+        & h1{
+            margin-top: 15vh;
+            font-size: 55px;
+            color:$text_2;
+            line-height: 83px;
+        }
+        & p{
+            margin-top: 20px;
+            font-size: 20px;
+            padding: 0 10%;
+            color: $text_2;
+            line-height:30px ;
+        };
+    }
+    &__bar{
+        background-color: $bg-color;
+        padding: 30px;
+        font-size: 20px;
+        line-height: 34px;
+        color: $text_2;
+        grid-column: 1/4;
+        display: flex;
+        justify-content:space-around;
+        flex-wrap: wrap;
+        &--input{
+            & .email{
+                @include inputs;
+               
+            }
+            & .submit-button{
+                @include buttons;
+                
+            }
+        }
+    }
+    &__boxes{
+        grid-column: 1/4;
+        display: flex;
+        justify-content: center;
+        background-color: $bg-boxes;
+        flex-wrap: wrap;
+        & img{
+            width: 90px;
+        }
+        & div{
+            padding: 30px 30px 40px 10px;
+            text-align: center;
+            width: 300px;
+            & h2{
+                padding: 24px;
+            }
+        }
+    }
+    &__footer{
+        background-color: #FFFAF0;
+        border-top: 3px solid $text_1;
+        grid-column: 1/4;
+        text-align: center;
+        padding: 35px;
+        & p{
+            padding-bottom: 5px;
+        }
+        & img{
+            width: 200px;
+        }
+    }
+}
+
+@media (max-width:992px) and (min-width:600px){
+    .container{
+        &__header{
+            &--logo{
+                margin: auto;
+                & h2{
+                    font-size: 26px;
+                }
+            }
+            &--menu{
+                margin: auto;
+            }
+        }
+        &__main{
+            & h1{
+                margin-top: 50px;
+                font-size:40px ;
+            }
+            & p{
+                font-size: 16px;
+            }
+        } 
+    }
+}
+@media (max-width:600px) {
+    .container{
+        &__header{
+            &--logo{
+                & h2{
+                    font-size: 24px;
+                }
+            }
+        }
+        &__main{
+            & h1{
+                margin-top: 50px;
+                font-size: 30px ;
+            }
+            & p{
+                font-size: 16px;
+            }
+        }
+        &__boxes{
+            & div:nth-child(2), div:first-child {
+                border-bottom: 1px solid #CCCCCC;
+            }
+        }
+        &__about{
+            flex-flow: column;
+        }
+    }
+}

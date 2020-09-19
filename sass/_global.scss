@@ -1,0 +1,21 @@
+$bg-color:#35424A;
+$text-1:#a9508b;
+$text_2:white;
+$bg-boxes:#F4F4F4;
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+@mixin inputs{
+    height: 20px;
+    width: 250px;
+    font-size: 13px;
+    padding: 5px;
+}
+@mixin buttons{
+    height: 35px;
+    width: 100px;
+    font-size: 13px;
+    background-color: $text_1;
+    color: $text_2;
+    border: none;
+}

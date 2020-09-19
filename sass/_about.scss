@@ -1,0 +1,39 @@
+.container{
+    font-size: 15px;
+    &__about{
+        background-color: $bg-boxes;
+        padding:20px 10% 20% 10%;
+        grid-column:1/4;
+        display: flex;
+        flex-wrap: wrap;
+        flex-flow: row;
+        gap: 0px 50px;
+        line-height: 23px;
+        &--header{
+            & h3{
+                margin-bottom: 15px;
+            }
+        }
+        &--left{
+            padding: 20px;
+            background-color: $bg-color;
+            color:$text_2;
+        }
+        &--right{
+            background-color: $bg-color;
+            padding: 30px 30px 30px 15px;
+            margin-bottom: 100px;
+            color:$text_2;
+            & h3{
+                padding-bottom: 20px;
+            }
+        }
+    }
+}
+@media (max-width:992px) {
+    .container{
+        &__about{
+            flex-flow: column;
+        }
+    }
+}
