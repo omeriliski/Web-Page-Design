@@ -45,7 +45,7 @@
   .container__main {
     grid-column: 1/4;
     height: 60vh;
-    background-image: url("./img/showcase.jpg");
+    background-image: url("../img/showcase.jpg");
     background-repeat: no-repeat;
     background-size: 160%;
     text-align: center; }
